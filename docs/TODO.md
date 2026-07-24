@@ -50,55 +50,55 @@
 
 ## E01 — Workspace & two-repo bootstrap (29 tasks)
 
-- [ ] **T-0101** (P0) Create GitHub repos `najamjad-cop` and `najamjad-thief` — DoD: both repos exist with `main` default branch and an initial commit pushed [ADR-002]
-- [ ] **T-0102** (P0) Bootstrap cop repo with `uv init` (src layout, `requires-python`, committed `.python-version`) — DoD: `uv sync` succeeds from clean clone; no pip/venv artifacts anywhere
-- [ ] **T-0103** (P0) Bootstrap thief repo with identical `uv init` layout — DoD: `uv sync` succeeds; pyproject structure byte-comparable to cop repo except name/role fields [deps: T-0102]
-- [ ] **T-0104** (P0) Add prescribed ruff config to both pyprojects (line-length 100, target py310, select E,F,W,I,N,UP,B,C4,SIM, ignore E501) plus local stricter `extend-select` for S110/S112 — DoD: `uv run ruff check` runs clean on the skeleton in both repos [ADR-008/ADR-010]
-- [ ] **T-0105** (P0) Add pytest + coverage config to both pyprojects: `source=["src"]`, honest omit list (`ui/static` assets only; at most the `cli.py` entry wiring — there is no `main.py` in the module map), `fail_under = 85` — DoD: `uv run pytest --cov` enforces the floor; omit list contains no logic modules and stays synced with the real tree [ADR-010]
-- [ ] **T-0106** (P0) Add runtime dependencies via `uv add` (fastmcp, pydantic, fastapi, uvicorn, websockets, httpx, anthropic, openai, google-api-python-client, google-auth, google-auth-oauthlib, typer) — DoD: `uv.lock` committed in both repos; `uv sync --frozen` passes
-- [ ] **T-0107** (P0) Add dev dependencies via `uv add --dev` (pytest, pytest-cov, pytest-asyncio, hypothesis, ruff) — DoD: `uv run pytest` and `uv run ruff check` work via lockfile only
-- [ ] **T-0108** (P0) Write `.gitignore` in both repos covering `.env`, `*.pem`, `*.key`, `credentials.json`, `token.json`, `logs/`, `matches/*/secrets*`, caches, venvs — DoD: `git check-ignore` confirms each pattern; secret files cannot be staged
-- [ ] **T-0109** (P0) Commit `.env-example` in both repos with dummy values for `ANTHROPIC_API_KEY`, `DEEPSEEK_API_KEY`, OAuth file paths — DoD: file exists, contains no real secrets, referenced from README install section
-- [ ] **T-0110** (P0) Add LICENSE + third-party attribution (reference simulator Educational-Use EULA acknowledged, library credits) to both repos — DoD: LICENSE at root; attribution section stub in README
-- [ ] **T-0111** (P0) Create package skeleton `src/najamjad_agent/` with `__init__.py` exporting `__version__ = "1.00"` and `__all__`; `__init__.py` in every planned sub-package (PLAN §1.3 tree) — DoD: `uv run python -c "import najamjad_agent"` prints version 1.00 in both repos
-- [ ] **T-0112** (P0) Implement `shared/version.py` (code version 1.00, supported config versions constant; ≤120 code lines) — DoD: single source of version truth imported by `__init__` [FR-CFG-2]
-- [ ] **T-0113** (P0) Create `tests/` skeleton mirroring `src/` (tests/unit/test_<module>/, tests/integration/, conftest.py) with a first test asserting `__version__ == "1.00"` — DoD: `uv run pytest` green in both repos
-- [ ] **T-0114** (P0) Write failing tests for `constants.py`: Move/Role/Phase/Intent/EndReason enums, move deltas, no diagonal in orthogonal set — DoD: tests exist and fail (RED)
-- [ ] **T-0115** (P0) Implement `src/najamjad_agent/constants.py` enums + DELTAS (≤120 code lines) — DoD: T-0114 tests green; only Enum values / physical constants live here (no tunables)
-- [ ] **T-0116** (P0) Write failing tests for `scripts/core_manifest.py`: manifest lists mirrored core files with SHA-256; drift in one byte changes manifest — DoD: tests fail (RED) [ADR-002]
-- [ ] **T-0117** (P0) Implement `scripts/core_manifest.py` (compute + verify modes, ≤120 code lines) — DoD: T-0116 green; `uv run python scripts/core_manifest.py verify` exits 0 on both fresh repos
-- [ ] **T-0118** (P0) Define the mirrored-core file list and sync procedure (which PLAN §1.3 files are core vs role-specific) in `scripts/core_manifest.json` + `docs/CORE_SYNC.md` — DoD: list matches ADR-002 (strategy modules and config defaults excluded); procedure covers "edit in cop → sync to thief → verify"
-- [ ] **T-0119** (P0) Write cop repo README stub: title, one-paragraph purpose, section placeholders (install/usage/config/screenshots/academic report/license), cross-link to thief repo — DoD: renders on GitHub, thief link resolves
-- [ ] **T-0120** (P0) Write thief repo README stub with cross-link to cop repo — DoD: renders; cop link resolves (book rule 49)
+- [~] **T-0101** (P0) Create GitHub repos `najamjad-cop` and `najamjad-thief` — DoD: both repos exist with `main` default branch and an initial commit pushed [ADR-002]
+- [x] **T-0102** (P0) Bootstrap cop repo with `uv init` (src layout, `requires-python`, committed `.python-version`) — DoD: `uv sync` succeeds from clean clone; no pip/venv artifacts anywhere
+- [~] **T-0103** (P0) Bootstrap thief repo with identical `uv init` layout — DoD: `uv sync` succeeds; pyproject structure byte-comparable to cop repo except name/role fields [deps: T-0102]
+- [~] **T-0104** (P0) Add prescribed ruff config to both pyprojects (line-length 100, target py310, select E,F,W,I,N,UP,B,C4,SIM, ignore E501) plus local stricter `extend-select` for S110/S112 — DoD: `uv run ruff check` runs clean on the skeleton in both repos [ADR-008/ADR-010]
+- [x] **T-0105** (P0) Add pytest + coverage config to both pyprojects: `source=["src"]`, honest omit list (`ui/static` assets only; at most the `cli.py` entry wiring — there is no `main.py` in the module map), `fail_under = 85` — DoD: `uv run pytest --cov` enforces the floor; omit list contains no logic modules and stays synced with the real tree [ADR-010]
+- [x] **T-0106** (P0) Add runtime dependencies via `uv add` (fastmcp, pydantic, fastapi, uvicorn, websockets, httpx, anthropic, openai, google-api-python-client, google-auth, google-auth-oauthlib, typer) — DoD: `uv.lock` committed in both repos; `uv sync --frozen` passes
+- [x] **T-0107** (P0) Add dev dependencies via `uv add --dev` (pytest, pytest-cov, pytest-asyncio, hypothesis, ruff) — DoD: `uv run pytest` and `uv run ruff check` work via lockfile only
+- [x] **T-0108** (P0) Write `.gitignore` in both repos covering `.env`, `*.pem`, `*.key`, `credentials.json`, `token.json`, `logs/`, `matches/*/secrets*`, caches, venvs — DoD: `git check-ignore` confirms each pattern; secret files cannot be staged
+- [x] **T-0109** (P0) Commit `.env-example` in both repos with dummy values for `ANTHROPIC_API_KEY`, `DEEPSEEK_API_KEY`, OAuth file paths — DoD: file exists, contains no real secrets, referenced from README install section
+- [x] **T-0110** (P0) Add LICENSE + third-party attribution (reference simulator Educational-Use EULA acknowledged, library credits) to both repos — DoD: LICENSE at root; attribution section stub in README
+- [x] **T-0111** (P0) Create package skeleton `src/najamjad_agent/` with `__init__.py` exporting `__version__ = "1.00"` and `__all__`; `__init__.py` in every planned sub-package (PLAN §1.3 tree) — DoD: `uv run python -c "import najamjad_agent"` prints version 1.00 in both repos
+- [x] **T-0112** (P0) Implement `shared/version.py` (code version 1.00, supported config versions constant; ≤120 code lines) — DoD: single source of version truth imported by `__init__` [FR-CFG-2]
+- [x] **T-0113** (P0) Create `tests/` skeleton mirroring `src/` (tests/unit/test_<module>/, tests/integration/, conftest.py) with a first test asserting `__version__ == "1.00"` — DoD: `uv run pytest` green in both repos
+- [x] **T-0114** (P0) Write failing tests for `constants.py`: Move/Role/Phase/Intent/EndReason enums, move deltas, no diagonal in orthogonal set — DoD: tests exist and fail (RED)
+- [x] **T-0115** (P0) Implement `src/najamjad_agent/constants.py` enums + DELTAS (≤120 code lines) — DoD: T-0114 tests green; only Enum values / physical constants live here (no tunables)
+- [x] **T-0116** (P0) Write failing tests for `scripts/core_manifest.py`: manifest lists mirrored core files with SHA-256; drift in one byte changes manifest — DoD: tests fail (RED) [ADR-002]
+- [x] **T-0117** (P0) Implement `scripts/core_manifest.py` (compute + verify modes, ≤120 code lines) — DoD: T-0116 green; `uv run python scripts/core_manifest.py verify` exits 0 on both fresh repos
+- [x] **T-0118** (P0) Define the mirrored-core file list and sync procedure (which PLAN §1.3 files are core vs role-specific) in `scripts/core_manifest.json` + `docs/CORE_SYNC.md` — DoD: list matches ADR-002 (strategy modules and config defaults excluded); procedure covers "edit in cop → sync to thief → verify"
+- [x] **T-0119** (P0) Write cop repo README stub: title, one-paragraph purpose, section placeholders (install/usage/config/screenshots/academic report/license), cross-link to thief repo — DoD: renders on GitHub, thief link resolves
+- [x] **T-0120** (P0) Write thief repo README stub with cross-link to cop repo — DoD: renders; cop link resolves (book rule 49)
 - [ ] **T-0121** (P1) Add CONTRIBUTING.md with git conventions: meaningful commit messages, feature branches, PRs between members, tag policy — DoD: file exists in both repos; first feature branch + PR exercised once
-- [ ] **T-0122** (P0) Copy `docs/PRD.md`, `docs/PLAN.md`, `docs/TODO.md` into both repos' `docs/` and add them to the sync procedure — DoD: guideline-mandated docs present in both repos (E6 gate) [deps: T-0118]
-- [ ] **T-0123** (P0) Document canonical dev commands (uv sync / uv run pytest / uv run ruff check / uv run <cli>) in README dev section — DoD: zero `pip`/`python -m` strings anywhere in repos including docs (E4 gate)
-- [ ] **T-0124** (P0) Verify walking skeleton: both repos pass `uv run pytest` and `uv run ruff check` locally from a clean clone — DoD: screenshot/log of both green runs attached to PR; M1 precondition met
+- [x] **T-0122** (P0) Copy `docs/PRD.md`, `docs/PLAN.md`, `docs/TODO.md` into both repos' `docs/` and add them to the sync procedure — DoD: guideline-mandated docs present in both repos (E6 gate) [deps: T-0118]
+- [x] **T-0123** (P0) Document canonical dev commands (uv sync / uv run pytest / uv run ruff check / uv run <cli>) in README dev section — DoD: zero `pip`/`python -m` strings anywhere in repos including docs (E4 gate)
+- [~] **T-0124** (P0) Verify walking skeleton: both repos pass `uv run pytest` and `uv run ruff check` locally from a clean clone — DoD: screenshot/log of both green runs attached to PR; M1 precondition met
 - [ ] **T-0125** (P1) Create annotated tag `v0.1-skeleton` on both repos — DoD: tag pushed; fresh clone at tag passes T-0124 checks
-- [ ] **T-0126** (P0) Extract goldens: copy the 4 sample-run artifacts from `reference/Game-P2P-Cop-Chase/docs/sample-run/` into `tests/goldens/artifacts/` with a provenance README — DoD: files committed in both repos; provenance notes the source commit [ADR-012, PRD A1]
+- [x] **T-0126** (P0) Extract goldens: copy the 4 sample-run artifacts from `reference/Game-P2P-Cop-Chase/docs/sample-run/` into `tests/goldens/artifacts/` with a provenance README — DoD: files committed in both repos; provenance notes the source commit [ADR-012, PRD A1]
 - [ ] **T-0127** (P0) Extract wire goldens: representative negotiate/turn/audit/control payloads (from reference code + sample log) into `tests/goldens/wire/` — DoD: fixtures committed with field-source comments [ADR-012]
-- [ ] **T-0128** (P0) Procure the Anthropic API key by Jul 28: billing active, spend cap set, key in `.env` only (never committed), one live completion round-trip verified — DoD: live round-trip logged; re-verified through the gatekeeper by the preflight LLM check (T-1114) before M4 [PLAN R11]
-- [ ] **T-0129** (P0) Procure the DeepSeek API key by Jul 28: billing active, spend cap set, key in `.env` only, one live completion round-trip verified — DoD: live round-trip logged; re-verified through the gatekeeper by the preflight LLM check (T-1114) before M4 [PLAN R11]
+- [!] **T-0128** (P0) Procure the Anthropic API key by Jul 28: billing active, spend cap set, key in `.env` only (never committed), one live completion round-trip verified — DoD: live round-trip logged; re-verified through the gatekeeper by the preflight LLM check (T-1114) before M4 [PLAN R11]
+- [!] **T-0129** (P0) Procure the DeepSeek API key by Jul 28: billing active, spend cap set, key in `.env` only, one live completion round-trip verified — DoD: live round-trip logged; re-verified through the gatekeeper by the preflight LLM check (T-1114) before M4 [PLAN R11]
 
 ## E02 — CI compliance gates (23 tasks)
 
-- [ ] **T-0201** (P0) Create `.github/workflows/ci.yml` in cop repo: triggers on push+PR, `astral-sh/setup-uv`, `uv sync --frozen` — DoD: workflow runs green on a trivial commit [ADR-010]
-- [ ] **T-0202** (P0) Mirror `ci.yml` into thief repo (identical jobs; workflow file included in core manifest) — DoD: workflow green in thief repo [deps: T-0201]
-- [ ] **T-0203** (P0) Add ruff job: `uv run ruff check` fails the build on any violation — DoD: a planted violation on a test branch fails CI; removal turns it green (E2 gate)
-- [ ] **T-0204** (P0) Add pytest+coverage job: `uv run pytest --cov` with `fail_under = 85`; coverage XML/HTML uploaded as CI artifact — DoD: dropping below 85% on a test branch fails CI (E3 gate)
-- [ ] **T-0205** (P0) Write failing tests for `scripts/check_file_sizes.py`: counts code lines excluding blanks/comments/docstrings; fixtures for a 121-line and 151-line file — DoD: tests fail (RED)
-- [ ] **T-0206** (P0) Implement `scripts/check_file_sizes.py` (≤150 hard fail, >120 warn, ≤120 code lines itself) — DoD: T-0205 green; script exits 1 for the 151-line fixture, 0+warning for the 121-line fixture (E1 gate)
-- [ ] **T-0207** (P0) Wire file-size gate into CI on both repos over `src/` and `tests/` — DoD: planted 151-code-line file fails CI on a test branch
-- [ ] **T-0208** (P0) Add secret-scan job (`scripts/scan_secrets.py` or gitleaks): key/token patterns in tracked files + assert `.env-example` exists and `.gitignore` covers the secret list — DoD: job green; planted dummy `sk-ant-...` string fails it (E5 gate)
-- [ ] **T-0209** (P0) Write unit test for the secret scanner using planted-fixture files (positive and negative cases) — DoD: scanner behavior locked by tests
-- [ ] **T-0210** (P0) Add uv-only grep gate: CI fails on `pip install`, `python -m`, `virtualenv`, `requirements.txt` in code, scripts, workflows, and docs — excluding fenced code blocks that explicitly quote third-party commands (e.g., the reference simulator's `python -m police_thief` run line) — DoD: planted `pip install` line in a doc fails CI; a fenced third-party quotation does not (E4 gate)
-- [ ] **T-0211** (P1) Write unit test for the uv-only gate script (allowed vs forbidden strings, incl. false-positive guard for words like "pipeline") — DoD: gate behavior locked by tests
-- [ ] **T-0212** (P0) Add no-silent-except gate: script flags `except ...: pass` / bare `except` without logging, supplementing ruff S110/S112 — DoD: planted silent except fails CI [FR-OBS-2 / ADR-008]
-- [ ] **T-0213** (P1) Write unit test for the no-silent-except gate (fixture with logged handler passes, `pass` handler fails) — DoD: gate behavior locked by tests
-- [ ] **T-0214** (P0) Add core-manifest cross-repo CI job: checkout sibling repo read-only, run `core_manifest.py verify` across both trees — DoD: byte-drift in one mirrored file fails CI in both repos [ADR-002; deps: T-0117]
+- [~] **T-0201** (P0) Create `.github/workflows/ci.yml` in cop repo: triggers on push+PR, `astral-sh/setup-uv`, `uv sync --frozen` — DoD: workflow runs green on a trivial commit [ADR-010]
+- [~] **T-0202** (P0) Mirror `ci.yml` into thief repo (identical jobs; workflow file included in core manifest) — DoD: workflow green in thief repo [deps: T-0201]
+- [~] **T-0203** (P0) Add ruff job: `uv run ruff check` fails the build on any violation — DoD: a planted violation on a test branch fails CI; removal turns it green (E2 gate)
+- [~] **T-0204** (P0) Add pytest+coverage job: `uv run pytest --cov` with `fail_under = 85`; coverage XML/HTML uploaded as CI artifact — DoD: dropping below 85% on a test branch fails CI (E3 gate)
+- [x] **T-0205** (P0) Write failing tests for `scripts/check_file_sizes.py`: counts code lines excluding blanks/comments/docstrings; fixtures for a 121-line and 151-line file — DoD: tests fail (RED)
+- [x] **T-0206** (P0) Implement `scripts/check_file_sizes.py` (≤150 hard fail, >120 warn, ≤120 code lines itself) — DoD: T-0205 green; script exits 1 for the 151-line fixture, 0+warning for the 121-line fixture (E1 gate)
+- [~] **T-0207** (P0) Wire file-size gate into CI on both repos over `src/` and `tests/` — DoD: planted 151-code-line file fails CI on a test branch
+- [~] **T-0208** (P0) Add secret-scan job (`scripts/scan_secrets.py` or gitleaks): key/token patterns in tracked files + assert `.env-example` exists and `.gitignore` covers the secret list — DoD: job green; planted dummy `sk-ant-...` string fails it (E5 gate)
+- [x] **T-0209** (P0) Write unit test for the secret scanner using planted-fixture files (positive and negative cases) — DoD: scanner behavior locked by tests
+- [~] **T-0210** (P0) Add uv-only grep gate: CI fails on `pip install`, `python -m`, `virtualenv`, `requirements.txt` in code, scripts, workflows, and docs — excluding fenced code blocks that explicitly quote third-party commands (e.g., the reference simulator's `python -m police_thief` run line) — DoD: planted `pip install` line in a doc fails CI; a fenced third-party quotation does not (E4 gate)
+- [x] **T-0211** (P1) Write unit test for the uv-only gate script (allowed vs forbidden strings, incl. false-positive guard for words like "pipeline") — DoD: gate behavior locked by tests
+- [x] **T-0212** (P0) Add no-silent-except gate: script flags `except ...: pass` / bare `except` without logging, supplementing ruff S110/S112 — DoD: planted silent except fails CI [FR-OBS-2 / ADR-008]
+- [x] **T-0213** (P1) Write unit test for the no-silent-except gate (fixture with logged handler passes, `pass` handler fails) — DoD: gate behavior locked by tests
+- [~] **T-0214** (P0) Add core-manifest cross-repo CI job: checkout sibling repo read-only, run `core_manifest.py verify` across both trees — DoD: byte-drift in one mirrored file fails CI in both repos [ADR-002; deps: T-0117]
 - [ ] **T-0215** (P0) Add golden-file check job: `uv run pytest -m goldens` validating the `tests/goldens/` fixtures (extracted in T-0126/T-0127) against our schemas — DoD: job wired in M1; fully green once the E09 schema tasks land; fails if a golden stops parsing [ADR-012]
-- [ ] **T-0216** (P0) Add structure-presence gate: CI asserts README.md, docs/PRD.md, docs/PLAN.md, docs/TODO.md, .env-example, uv.lock, LICENSE exist — DoD: deleting any of them on a test branch fails CI (E6 gate)
-- [ ] **T-0217** (P1) Add the nightly self-play workflow scaffold (cron): invokes the seeded self-play harness when present, tolerates a missing harness (skips with a visible notice), publishes the win-rate summary artifact when available; does NOT block PRs — DoD: scheduled run visible; skip path exercised before the harness exists [FR-STR-7]
+- [~] **T-0216** (P0) Add structure-presence gate: CI asserts README.md, docs/PRD.md, docs/PLAN.md, docs/TODO.md, .env-example, uv.lock, LICENSE exist — DoD: deleting any of them on a test branch fails CI (E6 gate)
+- [~] **T-0217** (P1) Add the nightly self-play workflow scaffold (cron): invokes the seeded self-play harness when present, tolerates a missing harness (skips with a visible notice), publishes the win-rate summary artifact when available; does NOT block PRs — DoD: scheduled run visible; skip path exercised before the harness exists [FR-STR-7]
 - [ ] **T-0218** (P2) Add CI status badges to both READMEs — DoD: badges render and reflect live status
 - [ ] **T-0219** (P1) Configure CI caching (uv cache) and job concurrency — DoD: typical PR pipeline completes in < 5 minutes
 - [ ] **T-0220** (P1) Ensure CI failures are loudly visible: GitHub notifications on for both members; failure-triage step in runbook — DoD: documented; test failure produced a notification to both members
@@ -759,8 +759,8 @@ Every task, in addition to its own DoD, is done only when ALL of the following h
 
 | Epic | Title | Milestone | Total | Done | Blocked |
 |---|---|---|---:|---:|---:|
-| E01 | Workspace & two-repo bootstrap | M1 | 29 | 0 | 0 |
-| E02 | CI compliance gates | M1 | 23 | 0 | 0 |
+| E01 | Workspace & two-repo bootstrap | M1 | 29 | 20 | 2 |
+| E02 | CI compliance gates | M1 | 23 | 6 | 0 |
 | E03 | Config system | M2 | 24 | 0 | 0 |
 | E04 | Shared infrastructure | M2 | 28 | 0 | 0 |
 | E05 | Domain: board/movement/barriers/capture/scoring | M2 | 35 | 0 | 0 |

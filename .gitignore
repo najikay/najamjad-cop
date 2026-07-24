@@ -19,3 +19,6 @@ dist/
 # Runtime artifacts (archived per match under version control only via matches/)
 logs/
 *.log
+
+# Per-match private material stays out of history
+matches/**/secrets*

@@ -19,7 +19,7 @@ MANIFEST = (
     "tests",
     "scripts",
     "docs",
-    ".github/workflows/ci.yml",
+    ".github/workflows",
     ".gitignore",
     ".env-example",
     "LICENSE",
