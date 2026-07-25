@@ -130,9 +130,32 @@ picture.
 
 - [x] **T-1101** — domain decided: **`4laboratory.com`** on Cloudflare
       (registrar + DNS), recorded as the ADR-004 addendum below.
-- [ ] **T-1109** — create both named tunnels + DNS routes with the commands in
-      §2, then verify each public URL **from a phone on mobile data** (proves it
-      is genuinely public, not merely reachable on the LAN).
+- [x] **T-1109 (cop side verified 2026-07-25)** — both named tunnels created
+      (`najamjad-cop`, `najamjad-thief`) with DNS routes. A real MCP call was
+      made through `https://cop.4laboratory.com/mcp` from outside: all four
+      tools listed, `receive_turn` returned `{"accepted": true}`, and the
+      server logged `inbox.accepted` — the message reached the game queue, not
+      merely the HTTP layer.
+- [ ] **T-1109 (remaining)** — run the same check for
+      `thief.4laboratory.com` once the thief agent runs, and load both URLs
+      **from a phone on mobile data** as an independent confirmation that they
+      are genuinely public rather than resolving locally.
+
+### Verified startup sequence (cop)
+
+```bash
+# terminal 1 — the agent's MCP server
+uv run python -c "from najamjad_agent.net.inbox import Inboxes; \
+from najamjad_agent.net.mcp_server import PeerServer; import time; \
+s=PeerServer(Inboxes(), port=8802); s.start(); time.sleep(3600)"
+
+# terminal 2 — the tunnel (URL never changes)
+cloudflared tunnel run --url http://127.0.0.1:8802 najamjad-cop
+```
+
+A bare `curl https://cop.4laboratory.com/mcp` returns **HTTP 406**, and that is
+the healthy answer: MCP requires specific headers, so 406 proves our server —
+not Cloudflare — replied.
 
 ## 9. ADR-004 addendum — provider decision (2026-07-25)
 
