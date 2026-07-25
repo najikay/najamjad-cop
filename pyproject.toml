@@ -51,6 +51,7 @@ ignore = ["E501"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]
 addopts = "--cov=src/najamjad_agent --cov-report=term-missing"
 
 [tool.coverage.run]
