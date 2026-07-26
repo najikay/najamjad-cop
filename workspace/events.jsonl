@@ -21,3 +21,12 @@
 {"event":"agent.online","url":"https://cop.4laboratory.com/mcp"}
 {"event":"agent.offline"}
 {"event":"match.archived","files":1,"path":"/home/naji4/.claude/jobs/cd402880/tmp/m.zip"}
+{"event":"match.archived","files":1,"path":"/home/naji4/.claude/jobs/cd402880/tmp/najamjad-cop.zip"}
+{"event":"server.starting","url":"http://127.0.0.1:8802/mcp"}
+{"event":"server.started","url":"http://127.0.0.1:8802/mcp"}
+{"event":"agent.online","url":"https://cop.4laboratory.com/mcp"}
+{"event":"agent.offline"}
+{"event":"server.starting","url":"http://127.0.0.1:8802/mcp"}
+{"event":"server.started","url":"http://127.0.0.1:8802/mcp"}
+{"event":"agent.online","url":"https://cop.4laboratory.com/mcp"}
+{"event":"agent.offline"}
