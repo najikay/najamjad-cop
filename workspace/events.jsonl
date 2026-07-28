@@ -206,3 +206,7 @@
 {"audit":"Verified OK","end_reason":"capture","event":"subgame.finished","role":"thief","steps":11,"sub_game":2}
 {"event":"series.complete","sub_games":2}
 {"event":"match.finished","games":2}
+{"event":"server.starting","url":"http://127.0.0.1:8802/mcp"}
+{"event":"server.started","url":"http://127.0.0.1:8802/mcp"}
+{"event":"agent.online","url":"https://cop.4laboratory.com/mcp"}
+{"event":"agent.offline"}
