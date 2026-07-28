@@ -104,7 +104,7 @@
 - [ ] **T-0220** (P1) Ensure CI failures are loudly visible: GitHub notifications on for both members; failure-triage step in runbook — DoD: documented; test failure produced a notification to both members
 - [x] **T-0221** (P0) Red-team every gate once: one test branch per gate (oversize file, secret, pip string, silent except, coverage drop, manifest drift) — DoD: each branch fails on exactly its intended gate; evidence linked in PR
 - [x] **T-0222** (P1) Write `docs/CI.md`: what each job checks, thresholds, and the exact `uv run` command to reproduce each gate locally — DoD: doc exists in both repos and matches the workflow files
-- [ ] **T-0223** (P1) Add a pyright (basic mode) CI job on both repos: `uv add --dev pyright`, `uv run pyright` over `src/` — DoD: job green; a planted type error on a test branch fails it [ADR-014]
+- [x] **T-0223** (P1) Add a pyright (basic mode) CI job on both repos: `uv add --dev pyright`, `uv run pyright` over `src/` — DoD: job green; a planted type error on a test branch fails it [ADR-014]
 
 ## E03 — Config system (24 tasks)
 
@@ -128,7 +128,7 @@
 - [x] **T-0318** (P0) Write failing tests for per-opponent match workspace helpers: `matches/<opponent>/` creation, path resolution for config/declaration/logs/results/profile — DoD: tests fail (RED) [FR-CFG-3]
 - [x] **T-0319** (P0) Implement workspace helpers in `shared/config.py` (split to `shared/workspace.py` ≤120 code lines if budget exceeded; update PLAN §1.3 + manifest) — DoD: T-0318 green; two opponents' workspaces fully isolated [FR-CFG-3]
 - [x] **T-0320** (P0) Implement `.env` secret loading (os.environ only, autoload at startup) with test that no secret value is ever read from a tracked config file — DoD: test green; grep confirms `os.environ.get` is the only secret path (E5 gate)
-- [ ] **T-0321** (P1) Add hardcoded-value meta-test: grep `src/` for tunable literals (URLs, timeouts, limits, emails) outside constants.py/config — DoD: meta-test green; each allowed constant justified by comment [guidelines §7.2]
+- [x] **T-0321** (P1) Add hardcoded-value meta-test: grep `src/` for tunable literals (URLs, timeouts, limits, emails) outside constants.py/config — DoD: meta-test green; each allowed constant justified by comment [guidelines §7.2]
 - [x] **T-0322** (P1) Write `docs/CONFIG.md`: every config key, default, source file, and Appendix F negotiability status (fixed/minimum/negotiable) — DoD: doc complete for all keys in all shipped config files
 - [ ] **T-0323** (P1) Document + test the config version-bump procedure: bumping a config version without updating `SUPPORTED_CONFIG_VERSIONS` is rejected at startup — DoD: test green; procedure in docs/CONFIG.md
 - [x] **T-0324** (P0) Add config module + canonical.py + shipped configs (shared parts) to the core manifest; verify byte-identical across repos — DoD: cross-repo CI job green [ADR-002; deps: T-0214]
