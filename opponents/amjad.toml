@@ -1,0 +1,7 @@
+# Practice partner — same team, distinct group_id so the artifacts do not
+# collapse. Two agents both declaring "najamjad" produce one dict key and one
+# score, silently.
+url      = "https://herald-warrior-dive-fellowship.trycloudflare.com/mcp"
+group_id = "najamjad-b"
+name     = "Amjad (practice, thief)"
+notes    = "Quick tunnel: the URL dies and changes whenever cloudflared restarts. Re-ask for it if the handshake 502s."

@@ -212,8 +212,34 @@ uv run python scripts/pre_match_smoke.py     # MATCH READY in ~50 s
 
 ### 4. Play
 
-Put the opponent's URL in `network.opponent_url` (`config/police/game.toml`),
-then:
+Write an opponent card once, then name it. `opponents/<name>.toml` carries the
+two facts that come from *them* — their MCP endpoint and the `group_id` their
+handshake declares:
+
+```toml
+url      = "https://their-agent.example.com/mcp"
+group_id = "their-group"
+name     = "Their Team"
+notes    = "quick tunnel — URL changes if cloudflared restarts"
+```
+
+Copy `opponents/_template.toml` to start. Then every verb takes `--opponent`:
+
+```bash
+uv run najamjad-cop preflight --opponent amjad
+uv run najamjad-cop match --opponent amjad --dashboard --no-tunnel
+```
+
+Nothing tracked needs editing, the settings for the last opponent are not
+overwritten by the next, and `opponent_group_id` — which must equal what their
+handshake declares, or the report is keyed by a placeholder instead of their
+name — is reviewable the day before instead of discoverable at the handshake.
+
+A card can only set `network.opponent_*`. Game terms are agreed in the signed
+`config/game.json`, and a per-opponent override of one is exactly the thing
+that must never be easy.
+
+Or set `network.opponent_url` in `config/police/game.toml` by hand, then:
 
 ```bash
 uv run najamjad-cop match --dashboard --no-tunnel
