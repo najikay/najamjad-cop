@@ -246,3 +246,9 @@
 {"event":"client.reconnecting","tool":"negotiate","url":"https://herald-warrior-dive-fellowship.trycloudflare.com/mcp"}
 {"attempt":3,"backoff":5,"error":"HTTPStatusError","event":"gatekeeper.retry","service":"mcp_peer"}
 {"attempts":3,"event":"gatekeeper.failed","service":"mcp_peer"}
+{"event":"server.starting","url":"http://127.0.0.1:8802/mcp"}
+{"event":"server.started","url":"http://127.0.0.1:8802/mcp"}
+{"event":"tunnel.up","provider":"cloudflare","url":"https://cop.4laboratory.com/mcp"}
+{"event":"agent.online","url":"https://cop.4laboratory.com/mcp"}
+{"event":"tunnel.stopped","provider":"cloudflare"}
+{"event":"agent.offline"}
