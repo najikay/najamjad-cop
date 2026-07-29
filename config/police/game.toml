@@ -29,10 +29,10 @@ thief = "https://github.com/najikay/najamjad-thief"
 # Our own MCP server port. The thief agent uses 8801 so both can run locally.
 my_port = 8802
 # Set per match from the opponent's public URL, exchanged during negotiation.
-opponent_url = ""
+opponent_url = "https://herald-warrior-dive-fellowship.trycloudflare.com/mcp"
 # Their group id, set per match once negotiation reveals it. Until then the
 # tracker scores against this placeholder and the filer relabels the result.
-opponent_group_id = "them"
+opponent_group_id = "najamjad-b"
 # How long to wait for their signed terms before giving up on the handshake.
 handshake_timeout_seconds = 60
 # Appendix F Table 19: response timeout 30 s, watchdog 60 s (both negotiable).
