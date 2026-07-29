@@ -1,8 +1,35 @@
 {
-  "_note": "Published list prices in USD per million tokens. These are the ONLY numbers in the cost table that are not measured by us — the token counts are. Re-check before submission; vendors change prices without notice.",
-  "_as_of": "2026-07-27",
-  "claude-haiku-4-5-20251001": {"input": 1.0, "output": 5.0, "vendor": "Anthropic"},
-  "claude-sonnet-5": {"input": 3.0, "output": 15.0, "vendor": "Anthropic"},
-  "deepseek-chat": {"input": 0.27, "output": 1.1, "vendor": "DeepSeek"},
-  "template": {"input": 0.0, "output": 0.0, "vendor": "local"}
+  "_note": "Published list prices in USD per million tokens. These are the ONLY numbers in the cost table that are not measured by us — the token counts are. Re-check before submission; vendors change prices without notice. deepseek-chat is kept for the historical cost curve only: DeepSeek retired it in favour of the v4 line, and a price table that still quoted it would cost a model nobody can call.",
+  "_as_of": "2026-07-29",
+  "claude-haiku-4-5-20251001": {
+    "input": 1.0,
+    "output": 5.0,
+    "vendor": "Anthropic"
+  },
+  "claude-sonnet-5": {
+    "input": 3.0,
+    "output": 15.0,
+    "vendor": "Anthropic"
+  },
+  "deepseek-chat": {
+    "input": 0.27,
+    "output": 1.1,
+    "vendor": "DeepSeek",
+    "_retired": "superseded by the v4 line; historical rows only"
+  },
+  "template": {
+    "input": 0.0,
+    "output": 0.0,
+    "vendor": "local"
+  },
+  "deepseek-v4-flash": {
+    "input": 0.14,
+    "output": 0.28,
+    "vendor": "DeepSeek"
+  },
+  "deepseek-v4-pro": {
+    "input": 0.435,
+    "output": 0.87,
+    "vendor": "DeepSeek"
+  }
 }
