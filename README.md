@@ -184,8 +184,14 @@ is enforced twice: the address is rewritten, and then checked at the point of no
 return, so a rewrite that silently failed raises instead of delivering. See
 [docs/CONFIG.md](docs/CONFIG.md) §3b.
 
-Toggle it from the panel (with `features.controls` on), or set
-`practice.enabled` in `config/setup.json`. It is read fresh each time a report
+Simplest is the flag — it arms practice for one process and touches nothing:
+
+```bash
+uv run najamjad-cop match --opponent amjad --practice --dashboard --tunnel
+```
+
+Or toggle it from the panel (with `features.controls` on), or set
+`practice.enabled` in `config/setup.json` to make it persist. It is read fresh each time a report
 is built, so the switch takes effect without a restart, and it overrides
 `email.mode` to `send` — a practice run that quietly produced a draft would
 look exactly like a successful send.
