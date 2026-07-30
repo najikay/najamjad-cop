@@ -1,0 +1,9 @@
+# For the ROLE-SWAPPED practice run: our thief vs their cop.
+#
+# Used by whoever runs the COP repo to dial the THIEF half. `thief.4laboratory.com`
+# is OUR named tunnel — Naji's account, Naji's connector on port 8801 — so this
+# card only answers while the thief agent is running on that machine.
+url      = "https://thief.4laboratory.com/mcp"
+group_id = "najamjad"
+name     = "the thief half (named tunnel, stable)"
+notes    = "502 here means the connector is up and the thief agent is not started."
