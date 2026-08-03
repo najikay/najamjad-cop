@@ -1,7 +1,7 @@
 {
  "seed": 7,
  "games_per_point": 24,
- "generated": "20260803T084203Z",
+ "generated": "20260803T081728Z",
  "sweeps": {
   "cop.barrier_threshold": {
    "why": "How confident the cop must be before spending one of 14 barriers.",
@@ -12,13 +12,13 @@
      "value": 0.15,
      "role": "cop",
      "played": 24,
-     "captures": 0,
-     "capture_rate": 0.0,
+     "captures": 1,
+     "capture_rate": 0.0417,
      "capture_rate_ci95": [
-      0.0,
-      0.138
+      0.0074,
+      0.2024
      ],
-     "win_rate": 0.0,
+     "win_rate": 0.0417,
      "disagreements": 0,
      "audit_failures": 0
     },
@@ -27,13 +27,13 @@
      "value": 0.05,
      "role": "cop",
      "played": 24,
-     "captures": 0,
-     "capture_rate": 0.0,
+     "captures": 1,
+     "capture_rate": 0.0417,
      "capture_rate_ci95": [
-      0.0,
-      0.138
+      0.0074,
+      0.2024
      ],
-     "win_rate": 0.0,
+     "win_rate": 0.0417,
      "disagreements": 0,
      "audit_failures": 0
     },
@@ -42,13 +42,13 @@
      "value": 0.1,
      "role": "cop",
      "played": 24,
-     "captures": 0,
-     "capture_rate": 0.0,
+     "captures": 1,
+     "capture_rate": 0.0417,
      "capture_rate_ci95": [
-      0.0,
-      0.138
+      0.0074,
+      0.2024
      ],
-     "win_rate": 0.0,
+     "win_rate": 0.0417,
      "disagreements": 0,
      "audit_failures": 0
     },
@@ -57,13 +57,13 @@
      "value": 0.25,
      "role": "cop",
      "played": 24,
-     "captures": 0,
-     "capture_rate": 0.0,
+     "captures": 1,
+     "capture_rate": 0.0417,
      "capture_rate_ci95": [
-      0.0,
-      0.138
+      0.0074,
+      0.2024
      ],
-     "win_rate": 0.0,
+     "win_rate": 0.0417,
      "disagreements": 0,
      "audit_failures": 0
     },
@@ -72,13 +72,13 @@
      "value": 0.4,
      "role": "cop",
      "played": 24,
-     "captures": 0,
-     "capture_rate": 0.0,
+     "captures": 1,
+     "capture_rate": 0.0417,
      "capture_rate_ci95": [
-      0.0,
-      0.138
+      0.0074,
+      0.2024
      ],
-     "win_rate": 0.0,
+     "win_rate": 0.0417,
      "disagreements": 0,
      "audit_failures": 0
     },
@@ -87,13 +87,13 @@
      "value": 0.6,
      "role": "cop",
      "played": 24,
-     "captures": 0,
-     "capture_rate": 0.0,
+     "captures": 1,
+     "capture_rate": 0.0417,
      "capture_rate_ci95": [
-      0.0,
-      0.138
+      0.0074,
+      0.2024
      ],
-     "win_rate": 0.0,
+     "win_rate": 0.0417,
      "disagreements": 0,
      "audit_failures": 0
     }
@@ -108,13 +108,13 @@
      "value": 2,
      "role": "cop",
      "played": 24,
-     "captures": 0,
-     "capture_rate": 0.0,
+     "captures": 1,
+     "capture_rate": 0.0417,
      "capture_rate_ci95": [
-      0.0,
-      0.138
+      0.0074,
+      0.2024
      ],
-     "win_rate": 0.0,
+     "win_rate": 0.0417,
      "disagreements": 0,
      "audit_failures": 0
     },
@@ -123,13 +123,13 @@
      "value": 1,
      "role": "cop",
      "played": 24,
-     "captures": 0,
-     "capture_rate": 0.0,
+     "captures": 1,
+     "capture_rate": 0.0417,
      "capture_rate_ci95": [
-      0.0,
-      0.138
+      0.0074,
+      0.2024
      ],
-     "win_rate": 0.0,
+     "win_rate": 0.0417,
      "disagreements": 0,
      "audit_failures": 0
     },
@@ -138,13 +138,13 @@
      "value": 3,
      "role": "cop",
      "played": 24,
-     "captures": 0,
-     "capture_rate": 0.0,
+     "captures": 1,
+     "capture_rate": 0.0417,
      "capture_rate_ci95": [
-      0.0,
-      0.138
+      0.0074,
+      0.2024
      ],
-     "win_rate": 0.0,
+     "win_rate": 0.0417,
      "disagreements": 0,
      "audit_failures": 0
     },
@@ -153,13 +153,13 @@
      "value": 4,
      "role": "cop",
      "played": 24,
-     "captures": 0,
-     "capture_rate": 0.0,
+     "captures": 1,
+     "capture_rate": 0.0417,
      "capture_rate_ci95": [
-      0.0,
-      0.138
+      0.0074,
+      0.2024
      ],
-     "win_rate": 0.0,
+     "win_rate": 0.0417,
      "disagreements": 0,
      "audit_failures": 0
     }
@@ -174,13 +174,13 @@
      "value": 3,
      "role": "thief",
      "played": 24,
-     "captures": 0,
-     "capture_rate": 0.0,
+     "captures": 1,
+     "capture_rate": 0.0417,
      "capture_rate_ci95": [
-      0.0,
-      0.138
+      0.0074,
+      0.2024
      ],
-     "win_rate": 1.0,
+     "win_rate": 0.9583,
      "disagreements": 0,
      "audit_failures": 0
     },
@@ -189,13 +189,13 @@
      "value": 1,
      "role": "thief",
      "played": 24,
-     "captures": 0,
-     "capture_rate": 0.0,
+     "captures": 1,
+     "capture_rate": 0.0417,
      "capture_rate_ci95": [
-      0.0,
-      0.138
+      0.0074,
+      0.2024
      ],
-     "win_rate": 1.0,
+     "win_rate": 0.9583,
      "disagreements": 0,
      "audit_failures": 0
     },
@@ -204,13 +204,13 @@
      "value": 2,
      "role": "thief",
      "played": 24,
-     "captures": 0,
-     "capture_rate": 0.0,
+     "captures": 1,
+     "capture_rate": 0.0417,
      "capture_rate_ci95": [
-      0.0,
-      0.138
+      0.0074,
+      0.2024
      ],
-     "win_rate": 1.0,
+     "win_rate": 0.9583,
      "disagreements": 0,
      "audit_failures": 0
     },
@@ -219,13 +219,13 @@
      "value": 4,
      "role": "thief",
      "played": 24,
-     "captures": 0,
-     "capture_rate": 0.0,
+     "captures": 1,
+     "capture_rate": 0.0417,
      "capture_rate_ci95": [
-      0.0,
-      0.138
+      0.0074,
+      0.2024
      ],
-     "win_rate": 1.0,
+     "win_rate": 0.9583,
      "disagreements": 0,
      "audit_failures": 0
     },
@@ -234,13 +234,13 @@
      "value": 5,
      "role": "thief",
      "played": 24,
-     "captures": 0,
-     "capture_rate": 0.0,
+     "captures": 1,
+     "capture_rate": 0.0417,
      "capture_rate_ci95": [
-      0.0,
-      0.138
+      0.0074,
+      0.2024
      ],
-     "win_rate": 1.0,
+     "win_rate": 0.9583,
      "disagreements": 0,
      "audit_failures": 0
     }
