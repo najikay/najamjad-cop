@@ -1,0 +1,259 @@
+{
+ "generated": "20260804T151732Z",
+ "seed": 7,
+ "ceiling": 105,
+ "shipped_score": 105,
+ "best_score": 105,
+ "best_genome": {
+  "horizon": 2,
+  "stall_trigger": 2,
+  "stall_room_weight": 3.159,
+  "distance_weight": 2.448,
+  "room_weight": 0.542,
+  "scent_weight": 1.163,
+  "risk_weight": 3.195,
+  "confident_share": 4.234
+ },
+ "rounds": [
+  {
+   "round": 1,
+   "champion": "fe99f5e0",
+   "scores": {
+    "9d40294b": 105,
+    "c4fae814": 105,
+    "e9b97c1c": 105,
+    "098a5cbc": 105,
+    "fe99f5e0": 105,
+    "f02794f0": 105,
+    "d3e66487": 105,
+    "6025920e": 105
+   },
+   "genome": {
+    "horizon": 2,
+    "stall_trigger": 2,
+    "stall_room_weight": 3.159,
+    "distance_weight": 2.448,
+    "room_weight": 0.542,
+    "scent_weight": 1.163,
+    "risk_weight": 3.195,
+    "confident_share": 4.234
+   }
+  },
+  {
+   "round": 2,
+   "champion": "fe99f5e0",
+   "scores": {
+    "a79f0688": 105,
+    "4399c15a": 105,
+    "1b72c199": 105,
+    "fdb8fb73": 105,
+    "fe99f5e0": 105,
+    "8b85c800": 105,
+    "175af27c": 105,
+    "a2703710": 105
+   },
+   "genome": {
+    "horizon": 2,
+    "stall_trigger": 2,
+    "stall_room_weight": 3.159,
+    "distance_weight": 2.448,
+    "room_weight": 0.542,
+    "scent_weight": 1.163,
+    "risk_weight": 3.195,
+    "confident_share": 4.234
+   }
+  },
+  {
+   "round": 3,
+   "champion": "fe99f5e0",
+   "scores": {
+    "9fa74c48": 105,
+    "2dbbcc32": 105,
+    "80bbaed0": 105,
+    "001b9e64": 105,
+    "fe99f5e0": 105,
+    "f3854565": 105,
+    "7a9f6faa": 105,
+    "96165a70": 105
+   },
+   "genome": {
+    "horizon": 2,
+    "stall_trigger": 2,
+    "stall_room_weight": 3.159,
+    "distance_weight": 2.448,
+    "room_weight": 0.542,
+    "scent_weight": 1.163,
+    "risk_weight": 3.195,
+    "confident_share": 4.234
+   }
+  },
+  {
+   "round": 4,
+   "champion": "fe99f5e0",
+   "scores": {
+    "aef387a1": 105,
+    "7c6aadc4": 105,
+    "2e940b19": 105,
+    "f96ebf3b": 105,
+    "fe99f5e0": 105,
+    "aac52980": 105,
+    "8d7ea0f1": 105,
+    "452056bb": 105
+   },
+   "genome": {
+    "horizon": 2,
+    "stall_trigger": 2,
+    "stall_room_weight": 3.159,
+    "distance_weight": 2.448,
+    "room_weight": 0.542,
+    "scent_weight": 1.163,
+    "risk_weight": 3.195,
+    "confident_share": 4.234
+   }
+  },
+  {
+   "round": 5,
+   "champion": "fe99f5e0",
+   "scores": {
+    "182493a8": 105,
+    "6b74a64e": 105,
+    "8afe6de5": 105,
+    "6b580db8": 105,
+    "fe99f5e0": 105,
+    "6d1e1db9": 105,
+    "9b3abc1a": 105,
+    "d8ba3821": 105
+   },
+   "genome": {
+    "horizon": 2,
+    "stall_trigger": 2,
+    "stall_room_weight": 3.159,
+    "distance_weight": 2.448,
+    "room_weight": 0.542,
+    "scent_weight": 1.163,
+    "risk_weight": 3.195,
+    "confident_share": 4.234
+   }
+  },
+  {
+   "round": 6,
+   "champion": "fe99f5e0",
+   "scores": {
+    "154adc9b": 105,
+    "07502be8": 105,
+    "8598dd1e": 105,
+    "d5a1c927": 105,
+    "fe99f5e0": 105,
+    "20093848": 105,
+    "39f18c6c": 105,
+    "3c2ee7d7": 105
+   },
+   "genome": {
+    "horizon": 2,
+    "stall_trigger": 2,
+    "stall_room_weight": 3.159,
+    "distance_weight": 2.448,
+    "room_weight": 0.542,
+    "scent_weight": 1.163,
+    "risk_weight": 3.195,
+    "confident_share": 4.234
+   }
+  },
+  {
+   "round": 7,
+   "champion": "fe99f5e0",
+   "scores": {
+    "5ae0dcfd": 105,
+    "4524a8d2": 105,
+    "272f8a53": 105,
+    "ddb5952a": 105,
+    "fe99f5e0": 105,
+    "4c0f6e14": 105,
+    "61eab14e": 105,
+    "a083afa6": 105
+   },
+   "genome": {
+    "horizon": 2,
+    "stall_trigger": 2,
+    "stall_room_weight": 3.159,
+    "distance_weight": 2.448,
+    "room_weight": 0.542,
+    "scent_weight": 1.163,
+    "risk_weight": 3.195,
+    "confident_share": 4.234
+   }
+  },
+  {
+   "round": 8,
+   "champion": "fe99f5e0",
+   "scores": {
+    "e78e7f2c": 105,
+    "b52ba8f3": 105,
+    "18f4ea84": 105,
+    "3770bfad": 105,
+    "fe99f5e0": 105,
+    "c7d41c93": 105,
+    "5511fa35": 105,
+    "fc3dd8ca": 105
+   },
+   "genome": {
+    "horizon": 2,
+    "stall_trigger": 2,
+    "stall_room_weight": 3.159,
+    "distance_weight": 2.448,
+    "room_weight": 0.542,
+    "scent_weight": 1.163,
+    "risk_weight": 3.195,
+    "confident_share": 4.234
+   }
+  },
+  {
+   "round": 9,
+   "champion": "fe99f5e0",
+   "scores": {
+    "f4a4739e": 105,
+    "fa4eff63": 105,
+    "27cf57f7": 105,
+    "6a3fd169": 105,
+    "fe99f5e0": 105,
+    "33b377a0": 105,
+    "4095fda8": 105,
+    "ce7673b8": 105
+   },
+   "genome": {
+    "horizon": 2,
+    "stall_trigger": 2,
+    "stall_room_weight": 3.159,
+    "distance_weight": 2.448,
+    "room_weight": 0.542,
+    "scent_weight": 1.163,
+    "risk_weight": 3.195,
+    "confident_share": 4.234
+   }
+  },
+  {
+   "round": 10,
+   "champion": "fe99f5e0",
+   "scores": {
+    "95a65166": 105,
+    "05583ca5": 105,
+    "56598c33": 105,
+    "159ce3d7": 105,
+    "fe99f5e0": 105,
+    "b4d66bfc": 105,
+    "574c7199": 105,
+    "e86102d2": 105
+   },
+   "genome": {
+    "horizon": 2,
+    "stall_trigger": 2,
+    "stall_room_weight": 3.159,
+    "distance_weight": 2.448,
+    "room_weight": 0.542,
+    "scent_weight": 1.163,
+    "risk_weight": 3.195,
+    "confident_share": 4.234
+   }
+  }
+ ]
+}
