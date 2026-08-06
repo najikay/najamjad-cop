@@ -25,7 +25,8 @@
         "retry_after_seconds": 5,
         "max_retries": 10,
         "queue_depth": 100,
-        "_note": "10 retries, 5 s apart — about 45 s of persistence, deliberately generous. Opponents run ngrok and other free tunnels that drop connections; we run a named tunnel and stay put, so the flakiness is nearly always theirs, and giving up after ~10 s forfeited four mini-games in a real match. The ceiling is THEIR watchdog, not our patience: the agreed watchdog_timeout_sec is 60, so past roughly 45 s of retrying they have already scored the turn against us and further attempts cannot win the game — they only delay our own scoring of it. Being generous up to that line is free; going beyond it is not."
+        "deadline_seconds": 45,
+        "_note": "10 retries, 5 s apart — about 45 s of persistence, deliberately generous. Opponents run ngrok and other free tunnels that drop connections; we run a named tunnel and stay put, so the flakiness is nearly always theirs, and giving up after ~10 s forfeited four mini-games in a real match. The ceiling is THEIR watchdog, not our patience: the agreed watchdog_timeout_sec is 60, so past roughly 45 s of retrying they have already scored the turn against us and further attempts cannot win the game — they only delay our own scoring of it. Being generous up to that line is free; going beyond it is not. deadline_seconds 45 is what MAKES that true: the retry count alone never bounded anything, because each attempt carries its own 30 s call timeout and PeerSession reconnects once inside it, so ten attempts could occupy 645 s against a 60 s watchdog. The cap is on total wall clock, not on the interval - Table 19 binds the interval at a 5 s MINIMUM and we keep it, so this is stricter on us and never looser."
       },
       "anthropic": {
         "requests_per_minute": 30,

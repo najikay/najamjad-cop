@@ -33,13 +33,13 @@
   "cross_play": {
    "matchup": "cross_play",
    "played": 50,
-   "captures": 32,
-   "capture_rate": 0.64,
+   "captures": 0,
+   "capture_rate": 0.0,
    "capture_rate_ci95": [
-    0.5014,
-    0.7586
+    0.0,
+    0.0714
    ],
-   "survival_rate": 0.36,
+   "survival_rate": 1.0,
    "disagreements": 0,
    "audit_failures": 0,
    "stalled": 0
