@@ -19,13 +19,13 @@
   "thief_vs_baseline": {
    "matchup": "thief_vs_baseline",
    "played": 50,
-   "captures": 0,
-   "capture_rate": 0.0,
+   "captures": 1,
+   "capture_rate": 0.02,
    "capture_rate_ci95": [
-    0.0,
-    0.0714
+    0.0035,
+    0.105
    ],
-   "survival_rate": 1.0,
+   "survival_rate": 0.98,
    "disagreements": 0,
    "audit_failures": 0,
    "stalled": 0
@@ -33,13 +33,13 @@
   "cross_play": {
    "matchup": "cross_play",
    "played": 50,
-   "captures": 0,
-   "capture_rate": 0.0,
+   "captures": 1,
+   "capture_rate": 0.02,
    "capture_rate_ci95": [
-    0.0,
-    0.0714
+    0.0035,
+    0.105
    ],
-   "survival_rate": 1.0,
+   "survival_rate": 0.98,
    "disagreements": 0,
    "audit_failures": 0,
    "stalled": 0
