@@ -1,7 +1,9 @@
-# Practice partner — same team, distinct group_id so the artifacts do not
-# collapse. Two agents both declaring "najamjad" produce one dict key and one
-# score, silently.
-url      = "https://partition-management-episodes-dad.trycloudflare.com/mcp"
+# amjad
+#
+# Both values come from THEM. `group_id` must equal what their handshake
+# declares, or the filer's rename never fires and our emitted report is keyed
+# by a placeholder instead of their name.
+url      = "https://circuit-voice-eastern-msgid.trycloudflare.com/mcp"
 group_id = "najamjad-b"
-name     = "Amjad (practice, thief)"
-notes    = "Quick tunnel — URL has already changed twice. cloudflared can stay alive while Cloudflare drops the hostname, so a live process is NOT evidence the URL still resolves. Re-ask before every match; 502 means up-but-idle, 530/NXDOMAIN means the name is gone."
+name     = "amjad"
+notes    = ""
