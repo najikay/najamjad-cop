@@ -12,6 +12,13 @@ protocol surprise should be met for the first time during a counted game.
 | Their cop URL | |
 | Their thief URL | |
 | Their repo (if shared) | |
+| Armed commit — their cop | |
+| Armed commit — their thief | |
+
+Full 40 characters, and copied into `opponents/<name>.toml` under
+`[armed_commits]` so `scripts/audit_opponent.py` can compare them against the
+`github_commit` their step-0 declares on the wire. A role-split opponent may
+have two different ones — vibecode did.
 
 ## Protocol expectations
 
