@@ -1,0 +1,320 @@
+{
+  "report_type": "final_game_result",
+  "schema_version": "1.2",
+  "game_id": "najamjad-vs-orcai-mj",
+  "game_uid": "87e65319-3cf1-d7c9-0f4e-cf940418aa14",
+  "groups": [
+    "najamjad",
+    "orcai-mj"
+  ],
+  "timezone": "UTC",
+  "game_started_at": "2026-08-24T12:28:19.299926+00:00",
+  "game_ended_at": "2026-08-24T12:50:34.094785+00:00",
+  "sub_games": [
+    {
+      "sub_game_number": 1,
+      "roles": {
+        "orcai-mj": "police",
+        "najamjad": "thief"
+      },
+      "result": "survival",
+      "winner_group": "najamjad",
+      "score": {
+        "orcai-mj": 5,
+        "najamjad": 10
+      },
+      "github_commit": {
+        "orcai-mj": "0d631993649f67a682077e7b4999f09e2393b9a5",
+        "najamjad": "c97876033e385cf785acba10b204cb79c0f1bda1"
+      },
+      "tokens": {
+        "orcai-mj": 0,
+        "najamjad": 0
+      },
+      "steps": 35,
+      "started_at": "2026-08-24T12:28:19.328574+00:00",
+      "ended_at": "2026-08-24T12:33:30.331010+00:00",
+      "audit": {
+        "log_verified": true,
+        "tampered": false,
+        "result_agreed": true
+      },
+      "log_files": [
+        "log_najamjad-vs-orcai-mj_g01.json"
+      ]
+    },
+    {
+      "sub_game_number": 2,
+      "roles": {
+        "orcai-mj": "thief",
+        "najamjad": "police"
+      },
+      "result": "capture",
+      "winner_group": "najamjad",
+      "score": {
+        "orcai-mj": 5,
+        "najamjad": 20
+      },
+      "github_commit": {
+        "orcai-mj": "87a0e2ba674d6026ff2bc3067aced529892dfcc3",
+        "najamjad": "653c952bde40f5cda78f3c863febf50a880e3e3f"
+      },
+      "tokens": {
+        "orcai-mj": 0,
+        "najamjad": 0
+      },
+      "steps": 28,
+      "started_at": "2026-08-24T12:28:19.299926+00:00",
+      "ended_at": "2026-08-24T12:33:13.717079+00:00",
+      "audit": {
+        "log_verified": true,
+        "tampered": false,
+        "result_agreed": true
+      },
+      "log_files": [
+        "log_najamjad-vs-orcai-mj_g02.json"
+      ]
+    },
+    {
+      "sub_game_number": 3,
+      "roles": {
+        "orcai-mj": "police",
+        "najamjad": "thief"
+      },
+      "result": "survival",
+      "winner_group": "najamjad",
+      "score": {
+        "orcai-mj": 5,
+        "najamjad": 10
+      },
+      "github_commit": {
+        "orcai-mj": "0d631993649f67a682077e7b4999f09e2393b9a5",
+        "najamjad": "c97876033e385cf785acba10b204cb79c0f1bda1"
+      },
+      "tokens": {
+        "orcai-mj": 0,
+        "najamjad": 0
+      },
+      "steps": 35,
+      "started_at": "2026-08-24T12:33:30.331010+00:00",
+      "ended_at": "2026-08-24T12:35:14.973519+00:00",
+      "audit": {
+        "log_verified": true,
+        "tampered": false,
+        "result_agreed": true
+      },
+      "log_files": [
+        "log_najamjad-vs-orcai-mj_g03.json"
+      ]
+    },
+    {
+      "sub_game_number": 4,
+      "roles": {
+        "orcai-mj": "thief",
+        "najamjad": "police"
+      },
+      "result": "capture",
+      "winner_group": "najamjad",
+      "score": {
+        "orcai-mj": 5,
+        "najamjad": 20
+      },
+      "github_commit": {
+        "orcai-mj": "87a0e2ba674d6026ff2bc3067aced529892dfcc3",
+        "najamjad": "653c952bde40f5cda78f3c863febf50a880e3e3f"
+      },
+      "tokens": {
+        "orcai-mj": 0,
+        "najamjad": 0
+      },
+      "steps": 28,
+      "started_at": "2026-08-24T12:33:13.717079+00:00",
+      "ended_at": "2026-08-24T12:34:54.169963+00:00",
+      "audit": {
+        "log_verified": true,
+        "tampered": false,
+        "result_agreed": true
+      },
+      "log_files": [
+        "log_najamjad-vs-orcai-mj_g04.json"
+      ]
+    },
+    {
+      "sub_game_number": 5,
+      "roles": {
+        "orcai-mj": "police",
+        "najamjad": "thief"
+      },
+      "result": "survival",
+      "winner_group": "najamjad",
+      "score": {
+        "orcai-mj": 5,
+        "najamjad": 10
+      },
+      "github_commit": {
+        "orcai-mj": "0d631993649f67a682077e7b4999f09e2393b9a5",
+        "najamjad": "c97876033e385cf785acba10b204cb79c0f1bda1"
+      },
+      "tokens": {
+        "orcai-mj": 0,
+        "najamjad": 0
+      },
+      "steps": 35,
+      "started_at": "2026-08-24T12:35:14.973519+00:00",
+      "ended_at": "2026-08-24T12:36:46.500460+00:00",
+      "audit": {
+        "log_verified": true,
+        "tampered": false,
+        "result_agreed": true
+      },
+      "log_files": [
+        "log_najamjad-vs-orcai-mj_g05.json"
+      ]
+    },
+    {
+      "sub_game_number": 6,
+      "roles": {
+        "orcai-mj": "thief",
+        "najamjad": "police"
+      },
+      "result": "capture",
+      "winner_group": "najamjad",
+      "score": {
+        "orcai-mj": 5,
+        "najamjad": 20
+      },
+      "github_commit": {
+        "orcai-mj": "87a0e2ba674d6026ff2bc3067aced529892dfcc3",
+        "najamjad": "653c952bde40f5cda78f3c863febf50a880e3e3f"
+      },
+      "tokens": {
+        "orcai-mj": 0,
+        "najamjad": 0
+      },
+      "steps": 28,
+      "started_at": "2026-08-24T12:34:54.187015+00:00",
+      "ended_at": "2026-08-24T12:36:08.999417+00:00",
+      "audit": {
+        "log_verified": true,
+        "tampered": false,
+        "result_agreed": true
+      },
+      "log_files": [
+        "log_najamjad-vs-orcai-mj_g06.json"
+      ]
+    }
+  ],
+  "links": {
+    "github": {
+      "orcai-mj": {
+        "cop": "https://github.com/akariya-mohammed/orcai-mj-cop",
+        "thief": "https://github.com/akariya-mohammed/orcai-mj-thief"
+      },
+      "najamjad": {
+        "cop": "https://github.com/najikay/najamjad-cop",
+        "thief": "https://github.com/najikay/najamjad-thief"
+      }
+    }
+  },
+  "group_details": {
+    "orcai-mj": {
+      "group_id": "orcai-mj",
+      "group_name": "Orcai-MJ",
+      "members": [
+        "Jude Khleif",
+        "Mohammad Akariya"
+      ],
+      "repos": {
+        "cop": "https://github.com/akariya-mohammed/orcai-mj-cop",
+        "thief": "https://github.com/akariya-mohammed/orcai-mj-thief"
+      },
+      "mcp_servers": {
+        "cop": "https://wendy-meets-prototype-natural.trycloudflare.com/mcp",
+        "thief": "https://learning-extending-declare-travesti.trycloudflare.com/mcp"
+      },
+      "llm_model": "none (deterministic heuristic agent)",
+      "hardware_spec": {
+        "os": "Windows 11 (build 10.0.26200)",
+        "cpu_type": "11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz",
+        "cpu_cores": 8,
+        "cpu_freq_mhz": "unknown",
+        "ram_gb": 8.2,
+        "gpu_type": "unknown",
+        "gpu_cores_or_cuda": "unknown",
+        "vram_gb": "unknown"
+      }
+    },
+    "najamjad": {
+      "group_id": "najamjad",
+      "group_name": "NajAmjad",
+      "members": [
+        "Naji Kayal",
+        "Amjad Abed"
+      ],
+      "repos": {
+        "cop": "https://github.com/najikay/najamjad-cop",
+        "thief": "https://github.com/najikay/najamjad-thief"
+      },
+      "mcp_servers": {
+        "cop": "https://cop.4laboratory.com/mcp",
+        "thief": "https://thief.4laboratory.com/mcp"
+      },
+      "llm_model": "deepseek-v4-flash",
+      "hardware_spec": {}
+    }
+  },
+  "mutual_agreement": {
+    "sha256": "262a9522637bc4689c64b9e356e09eec66aef155bd4afa98b71b016324a77a25",
+    "signed_over": [
+      "game_id",
+      "aggregate",
+      "sub_games"
+    ],
+    "serialization": "json.dumps(sort_keys=True, ensure_ascii=False) — default spaced separators",
+    "confirmed": false
+  },
+  "final_result": {
+    "total_score": {
+      "orcai-mj": 30,
+      "najamjad": 90
+    },
+    "sub_games_won": {
+      "orcai-mj": 0,
+      "najamjad": 6
+    },
+    "ties": 0,
+    "winner_group": "najamjad",
+    "series_tie": false,
+    "raw_total_score": {
+      "orcai-mj": 30,
+      "najamjad": 90
+    },
+    "tie_award": 0,
+    "tokens_total_series": 0
+  },
+  "dialect": "najamjad",
+  "spec_profile": "najamjad",
+  "match_mode": "FRIENDLY (UNCOUNTED)",
+  "num_sub_games": 6,
+  "config_sha256": "65c164a11b517f61036ffa2e65836a65bc17459c68fff3b9c38216e62b17bbb4",
+  "terms_sha256": "a284082dfb1572236f1b614d29295a99625539c7d33a096f7f8921bafbc3d08d",
+  "totals": {
+    "police": 75,
+    "thief": 45
+  },
+  "series_winner": "najamjad",
+  "all_audits_verified": true,
+  "aggregated_from": {
+    "cop_windows": [
+      1,
+      3,
+      5
+    ],
+    "thief_windows": [
+      2,
+      4,
+      6
+    ]
+  },
+  "result_sha256": "634671940666074b18b299efea62958ab18759837d32fa02340324f4c574db9a"
+}

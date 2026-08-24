@@ -1,0 +1,1 @@
+Friendly #2: 90-30/6-0 ours vs 80-25/5-0+disputed-g3 theirs. Their cop's timer declared g3 technical_loss mid-survival; digests split (262a9522 vs 1d7aac4f) — the live preview of a counted void. Their count/hardware fixes verified; their ties:1 aggregator bug + step-28 dup noted. Counted gated on their g3 timer fix + frozen pair.

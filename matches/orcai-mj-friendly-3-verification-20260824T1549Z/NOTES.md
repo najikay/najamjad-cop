@@ -1,0 +1,1 @@
+Verification friendly: 90-30/6-0, digest 262a9522 matched, ALL result_agreed:true incl. survivals — their g3 turn/audit-order fix proven (frozen pair 67692e56/b0354056). Counts 8/2 -> counted files 9/3. Their confirmed:false = their consensus round-trip only; digests match by document, written basis agreed. COUNTED FOLLOWS IMMEDIATELY.
